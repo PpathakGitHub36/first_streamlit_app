@@ -24,7 +24,7 @@ streamlit.dataframe(fruits_to_show)
 
 streamlit.header(" The fruit load list contains:")
 #Snowflake realted functions
-def get_fruit_load_list(this_fruit_choice):
+def get_fruit_load_list():
      with my_cnx.cursor() as my_cur:
           my_cnx.execute("SELECT * from fruit_load_list")      
      return my_cnx.fetchall()
